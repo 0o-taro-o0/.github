@@ -1,0 +1,42 @@
+name: 機能提案
+description: 新しい機能や改善の提案を共有するためのテンプレート
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        提案の背景や目的をチームと共有しましょう。
+  - type: input
+    id: summary
+    attributes:
+      label: 要約
+      description: 提案したい機能を一言で表現してください。
+      placeholder: 例）検索結果をフィルタリングできるようにする
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: 課題・背景
+      description: この提案が必要だと思う理由や背景を記載してください。
+      placeholder: 例）ユーザーが大量の結果から目的の項目を探すのに時間がかかっている
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 提案内容
+      description: どのような機能を追加したいか、具体的に記載してください。
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 代替案
+      description: 考慮した他の案があれば記載してください。
+  - type: textarea
+    id: additional
+    attributes:
+      label: 備考
+      description: 参考資料やスクリーンショットなどがあれば記載してください。
