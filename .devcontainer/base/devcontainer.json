@@ -1,0 +1,15 @@
+{
+  "name": "Base UBI9 Development Container",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": []
+    }
+  },
+  "remoteUser": "vscode"
+}
