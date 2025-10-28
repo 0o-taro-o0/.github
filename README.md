@@ -27,14 +27,22 @@ See [.devcontainer/README.md](.devcontainer/README.md) for detailed documentatio
 
 ```bash
 # Copy a configuration to your project
-cp -r .devcontainer/terraform-aws /path/to/your/project/.devcontainer
+cp -r .devcontainer/terraform-aws <YOUR_PROJECT_PATH>/.devcontainer
 
-# Or use directly via URL in your devcontainer.json
+# Or create your own devcontainer.json with features
+cat > <YOUR_PROJECT_PATH>/.devcontainer/devcontainer.json << 'EOF'
 {
+  "name": "My Project",
   "image": "registry.access.redhat.com/ubi9/ubi:latest",
   "features": {
-    "ghcr.io/devcontainers/features/terraform:1": {},
-    "ghcr.io/devcontainers/features/aws-cli:1": {}
-  }
+    "ghcr.io/devcontainers/features/terraform:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/aws-cli:1": {
+      "version": "latest"
+    }
+  },
+  "remoteUser": "vscode"
 }
+EOF
 ```
