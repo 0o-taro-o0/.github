@@ -1,0 +1,53 @@
+name: 不具合報告
+description: バグや問題を報告するためのテンプレート
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        問題の詳細をできるだけ詳しく記載してください。
+  - type: input
+    id: summary
+    attributes:
+      label: 概要
+      description: 何が起こっているか簡潔に記載してください。
+      placeholder: 例）一覧画面で500エラーが発生する
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現手順
+      description: 問題が発生した手順を順番に記載してください。
+      placeholder: |
+        1. ...にアクセスする
+        2. ...をクリックする
+        3. ...が発生する
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待する結果
+      description: 本来期待している挙動を記載してください。
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 実際の結果
+      description: 発生した結果やエラーメッセージなどを記載してください。
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: 環境情報
+      description: OS、ブラウザ、バージョンなどの環境情報を記載してください。
+      placeholder: 例）macOS 14 / Chrome 119 / アプリ v1.2.3
+  - type: textarea
+    id: additional
+    attributes:
+      label: 備考
+      description: スクリーンショットや追加情報があれば記載してください。
