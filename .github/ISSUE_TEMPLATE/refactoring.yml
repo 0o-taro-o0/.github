@@ -1,0 +1,48 @@
+name: リファクタリング提案
+description: コードの改善やリファクタリングを提案するためのテンプレート
+labels:
+  - refactoring
+body:
+  - type: markdown
+    attributes:
+      value: |
+        リファクタリングの目的や背景をチームと共有しましょう。
+  - type: input
+    id: summary
+    attributes:
+      label: 要約
+      description: リファクタリングしたい内容を一言で表現してください。
+      placeholder: 例）認証ロジックを共通モジュールに切り出す
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: 課題・背景
+      description: このリファクタリングが必要だと思う理由や背景を記載してください。
+      placeholder: 例）認証ロジックが複数の場所に散在しており、保守性が低下している
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 提案内容
+      description: どのようにリファクタリングするか、具体的に記載してください。
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: 影響範囲
+      description: このリファクタリングが影響する範囲や変更対象を記載してください。
+      placeholder: 例）src/auth/配下のすべてのファイル、認証を使用している全コンポーネント
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 代替案
+      description: 考慮した他の案があれば記載してください。
+  - type: textarea
+    id: additional
+    attributes:
+      label: 備考
+      description: 参考資料やスクリーンショットなどがあれば記載してください。
