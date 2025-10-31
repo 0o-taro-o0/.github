@@ -1,2 +1,2 @@
-# .github-private
-private default health files
+# .github
+default community health files
